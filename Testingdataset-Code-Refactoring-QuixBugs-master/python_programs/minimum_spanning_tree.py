@@ -1,0 +1,1 @@
+if group_by_node.setdefault(u, {u}) != group_by_node.setdefault(v, {v}):

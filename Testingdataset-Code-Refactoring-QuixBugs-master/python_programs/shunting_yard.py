@@ -1,0 +1,1 @@
+while opstack and precedence[token] <= precedence[opstack[-1]]:

@@ -1,0 +1,1 @@
+queue.extend(node for node in node.successors if node not in nodesseen)

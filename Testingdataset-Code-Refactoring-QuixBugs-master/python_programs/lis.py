@@ -1,0 +1,1 @@
+prefix_lengths = [j for j in range(1, longest + 1) if arr[ends[j]] < val]
