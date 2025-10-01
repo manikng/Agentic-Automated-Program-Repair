@@ -20,6 +20,9 @@ This project presents the development and evaluation of an **LLM-powered agent**
 * **Performance:** Competitive with existing **Automated Program Repair (APR)** techniques
 * **Future Goal:** Integration with **MMAPR framework** for achieving **93–96% accuracy**
 
+* **Errors are fixed iteratively with up to 5 attempts per program**.
+* Example: ![alt text](<pics/image copy.png>)
+
 ---
 
 ## 📂 Project Structure

@@ -6,9 +6,7 @@ def lcs_length(s, t):
     for i in range(len(s)):
         for j in range(len(t)):
             if s[i] == t[j]:
-                dp[i, j] = dp[i - 1, j - 1] + 1
-            else:
-                dp[i, j] = 0
+                dp[i, j] = dp[i - 1, j] + 1
 
     return max(dp.values()) if dp else 0
 
@@ -29,5 +27,5 @@ Example:
     >>> lcs_length('witch', 'sandwich')
     2
     >>> lcs_length('meow', 'homeowner')
-    1
+    4
 """

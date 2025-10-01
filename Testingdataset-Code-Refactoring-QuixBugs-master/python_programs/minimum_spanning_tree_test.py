@@ -1,23 +1,4 @@
-def minimum_spanning_tree(graph):
-    """
-    Placeholder implementation for minimum spanning tree.
-    """
-    # Sort edges by weight
-    edges = sorted(graph.items(), key=lambda item: item[1])
-    mst = []
-    nodes = set()
-    if edges:
-      nodes.add(edges[0][0][0])
-      nodes.add(edges[0][0][1])
-
-    for edge, weight in edges:
-        node1, node2 = edge
-        if node1 in nodes and node2 in nodes:
-            continue
-        mst.append(edge)
-        nodes.add(node1)
-        nodes.add(node2)
-    return mst
+from .minimum_spanning_tree import minimum_spanning_tree
 
 
 """
@@ -65,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

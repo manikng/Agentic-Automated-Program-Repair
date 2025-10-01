@@ -54,7 +54,7 @@ def main():
 
     # Case 5: Graph with cycles
     # Output: Path found!
-    nodee.successors = [] #nodee.successors = [nodea]
+    nodee.successors = [nodea]
 
     if depth_first_search(nodea, nodef):
         print("Path found!", end=" ")

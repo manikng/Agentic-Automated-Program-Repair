@@ -16,8 +16,13 @@ def shortest_path_length(length_by_edge, startnode, goalnode):
             if nextnode in visited_nodes:
                 continue
 
-            new_distance = distance + length_by_edge[node, nextnode]
-            insert_or_update(unvisited_nodes, (new_distance, nextnode))
+            insert_or_update(unvisited_nodes,
+                (min(
+                    get(unvisited_nodes, nextnode) or float('inf'),
+                    get(unvisited_nodes, nextnode) + length_by_edge[node, nextnode]
+                ),
+                nextnode)
+            )
 
     return float('inf')
 
@@ -33,8 +38,7 @@ def insert_or_update(node_heap, dist_node):
     for i, tpl in enumerate(node_heap):
         a, b = tpl
         if b == node:
-            node_heap[i] = dist_node
-            heapify(node_heap) #heapq retains sorted property
+            node_heap[i] = dist_node #heapq retains sorted property
             return None
 
     heappush(node_heap, dist_node)

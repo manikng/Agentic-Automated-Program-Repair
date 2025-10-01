@@ -1,22 +1,5 @@
-# Corrected code
-from typing import Optional
-
-class Node:
-    def __init__(self, value, successor=None):
-        self.value = value
-        self.successor = successor
-
-def reverse_linked_list(head: Optional[Node]) -> Optional[Node]:
-    """Given the head of a singly linked list, reverse the list, and return the reversed list.
-    """
-    prev = None
-    current = head
-    while(current is not None):
-        next = current.successor
-        current.successor = prev
-        prev = current
-        current = next
-    return prev
+from .node import Node
+from .reverse_linked_list import reverse_linked_list
 
 
 """
@@ -33,7 +16,7 @@ def main():
 
     result = reverse_linked_list(node5)
 
-    if result == node5:
+    if result == node1:
         print("Reversed!", end=" ")
     else:
         print("Not Reversed!", end=" ")
@@ -71,3 +54,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

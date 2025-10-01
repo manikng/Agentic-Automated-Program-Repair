@@ -7,11 +7,13 @@ class Node:
         self.incoming_nodes = incoming_nodes
         self.outgoing_nodes = outgoing_nodes
 
-    def get_successor(self):
+    def successor(self):
         return self.successor
 
-    def get_successors(self):
+    def successors(self):
         return self.successors
 
-    def get_predecessors(self):
+    def predecessors(self):
         return self.predecessors
+
+ 

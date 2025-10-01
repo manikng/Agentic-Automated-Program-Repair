@@ -1,3 +1,4 @@
+
 def is_valid_parenthesization(parens):
     depth = 0
     for paren in parens:
@@ -8,7 +9,7 @@ def is_valid_parenthesization(parens):
             if depth < 0:
                 return False
 
-    return depth == 0
+    return True
 
  
 """

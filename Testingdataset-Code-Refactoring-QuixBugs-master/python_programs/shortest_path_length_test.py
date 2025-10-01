@@ -1,34 +1,5 @@
-class Node:
-    def __init__(self, name, visited=False, neighbors=None):
-        self.name = name
-        self.visited = visited
-        self.neighbors = neighbors if neighbors is not None else []
-
-INT_MAX = float('inf')
-
-def shortest_path_length(length_by_edge, start, end):
-    if start == end:
-        return 0
-
-    distances = {node.name: INT_MAX for node in [start, end]} # Add other nodes
-    distances[start.name] = 0
-    
-    unvisited_nodes = {start} # Add other nodes
-
-    while unvisited_nodes:
-        current_node = unvisited_nodes.pop()
-
-        if current_node == end:
-            return distances[end.name]
-
-        for neighbor in current_node.neighbors:
-            if (current_node, neighbor) in length_by_edge:
-                edge_length = length_by_edge[(current_node, neighbor)]
-                new_distance = distances[current_node.name] + edge_length
-                if new_distance < distances[neighbor.name]:
-                    distances[neighbor.name] = new_distance
-                    unvisited_nodes.add(neighbor)
-    return INT_MAX
+from .node import Node
+from .shortest_path_length import shortest_path_length
 
 
 """

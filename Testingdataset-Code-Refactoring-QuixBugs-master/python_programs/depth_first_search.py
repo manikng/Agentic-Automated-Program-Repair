@@ -7,7 +7,6 @@ def depth_first_search(startnode, goalnode):
         elif node is goalnode:
             return True
         else:
-            nodesvisited.add(node)
             return any(
                 search_from(nextnode) for nextnode in node.successors
             )

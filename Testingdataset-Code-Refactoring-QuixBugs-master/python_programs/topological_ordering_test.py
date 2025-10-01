@@ -29,12 +29,6 @@ def main():
     nine.incoming_nodes = [eleven, eight]
     ten.incoming_nodes = [eleven, three]
 
-    # Add these lines to correctly set up incoming nodes
-    eleven.incoming_nodes = [five, seven]
-    two.incoming_nodes = [eleven]
-    nine.incoming_nodes = [eleven, eight]
-    ten.incoming_nodes = [three, eleven]
-    
     try:
         [print(x.value, end=" ") for x in topological_ordering([five, seven, three, eleven, eight, two, nine, ten])]
     except Exception as e:
